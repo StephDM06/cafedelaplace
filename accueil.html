@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c60e246d48.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../Le Café de la place/style.css" />
+    <title>La café de la place</title>
+  </head>
+  <header>
+    <h1><strong>LE CAFE DE LA PLACE</strong></h1>
+  </header>
+  <body>
+    <div class="row ajouter">
+      <div class="col-md-6 ajout">
+        <button
+          id="btnAjoutStock"
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Ajouter un produit
+        </button>
+      </div>
+      <div class="col-md-6 consult">
+        <button
+          id="btnConsult"
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="accordion"
+          data-bs-target="accordion-item"
+        >
+          <a href="../Le Café de la place/stock.html"> Consulter le stock </a>
+        </button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <label>Votre nouveau Produit</label>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <form  id="detailProd">
+              <label for="typeProduit">Type de produit :</label>
+              <select name="selectType" id="type-select">
+                <option value="">--Choisissez un type de produit--</option>
+                <option value="autre">Boisson non Alcoolisée</option>
+                <option value="balcool">Boisson alcoolisée</option>
+                <option value="autre">Autre type de produit</option>
+              </select>
+              <input type="submit" value="Valider" />
+            </p>
+              <div id="saisie">
+            
+            
+              <label for="nom">Nom du produit: </label>
+              <input
+                type="text"
+                placeholder="Nom du produit"
+                id="nom"
+                name="nom"
+                value="Azerty"
+              />
+        
+              <br />
+        
+              <label for="paht">Prix achat HT: </label>
+              <input
+                type="text"
+                placeholder="PA HT"
+                id="paht"
+                name="paht"
+                value="Azerty"
+              />
+        
+              <br />
+        
+              <label for="marge">Marge/coefficient souhaité: </label>
+              <input
+                type="text  "
+                placeholder="marge"
+                id="marge"
+                name="marge"
+                value="Azerty"
+              />
+        
+              <br />
+        
+              <label for="pvht" id="PrixHT">Prix de vente HT: </label>
+              
+              <br />
+              <label for="pvttc" id="PrixTTC">Prix de vente TTC : </label>
+              
+        
+              <br />
+              <div id="degre">
+              <label for="degre">Degré d'alcool : </label>
+              <input
+                type="text  "
+                placeholder="Degré d'alcool"
+                
+                name="degre"
+                value="Azerty"
+              />
+            </div>
+              <br />
+              <div id="quantite">
+                <label for="quantite">Quantite à mettre en stock : </label>
+                <input
+                  type="text  "
+                  placeholder="Quantité"
+                  
+                  name="quantite"
+                  value="Azerty"
+                />
+              </div>
+              <br />
+        
+              
+              <br />
+        
+              
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="validNewProd">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+    </div>
+    <script
+      type="text/javascript"
+      src="../Le Café de la place/script.js"
+    ></script>
+  </body>
+</html>
