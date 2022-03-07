@@ -24,7 +24,7 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../Le Café de la place/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>La café de la place</title>
   </head>
   <header>
@@ -51,7 +51,7 @@
           data-bs-toggle="accordion"
           data-bs-target="accordion-item"
         >
-          <a href="../Le Café de la place/stock.html"> Consulter le stock </a>
+          <a href="stock.html"> Consulter le stock </a>
         </button>
       </div>
     </div>
@@ -80,13 +80,13 @@
             <p>
               <form  id="detailProd">
               <label for="typeProduit">Type de produit :</label>
-              <select name="selectType" id="type-select">
+              <select name="selectType" id="type-select" onchange="">
                 <option value="">--Choisissez un type de produit--</option>
                 <option value="autre">Boisson non Alcoolisée</option>
                 <option value="balcool">Boisson alcoolisée</option>
                 <option value="autre">Autre type de produit</option>
               </select>
-              <input type="submit" value="Valider" />
+              <input id="valideType" type="submit" value="Valider" />
             </p>
               <div id="saisie">
             
@@ -97,7 +97,7 @@
                 placeholder="Nom du produit"
                 id="nom"
                 name="nom"
-                value="Azerty"
+                
               />
         
               <br />
@@ -108,7 +108,7 @@
                 placeholder="PA HT"
                 id="paht"
                 name="paht"
-                value="Azerty"
+                
               />
         
               <br />
@@ -119,7 +119,7 @@
                 placeholder="marge"
                 id="marge"
                 name="marge"
-                value="Azerty"
+                
               />
         
               <br />
@@ -138,7 +138,7 @@
                 placeholder="Degré d'alcool"
                 
                 name="degre"
-                value="Azerty"
+                
               />
             </div>
               <br />
@@ -149,7 +149,7 @@
                   placeholder="Quantité"
                   
                   name="quantite"
-                  value="Azerty"
+                  
                 />
               </div>
               <br />
@@ -181,7 +181,7 @@
     </div>
     <script
       type="text/javascript"
-      src="../Le Café de la place/script.js"
+      src="script.js"
     ></script>
   </body>
 </html>
