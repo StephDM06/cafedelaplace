@@ -1,12 +1,7 @@
 let titreProduit = document.querySelector("#titreProduit");
 
 let detailProduit = document.querySelector("#remplir");
-let nom;
-let paht;
-let marge;
-let quantite;
-let PrixHT;
-let PrixTTC;
+
 let produittab = [];
 
 if (localStorage.getItem("@produit ") == "") {
@@ -20,15 +15,20 @@ if (localStorage.getItem("@produit ") == "") {
   let content = "";
   let title = "";
 
-  content += `
-            <p> Prix d'achat HT: ${paht}
-            <p> Prix de vente TTC: ${PrixTTC}
+  produittab.forEach((element) => {
+    console.log(element.paht);
 
-        </p><button class="deleteButton">Supprimer </button>`;
-  title += `
-    <p> Nom du produit ${nom}`;
-  detailProduit.innerHTML = content;
-  titreProduit.innerHTML = title;
+    content += `
+              <p> Prix d'achat HT: ${element.paht}
+              <p> Quantité en stock: ${element.quantite}
+              <p> Prix de vente TTC: ${element.PrixTTC}
+
+          </p><button class="deleteButton">Supprimer </button>`;
+    title += `
+      ${element.nom}`;
+    detailProduit.innerHTML = content;
+    titreProduit.innerHTML = title;
+  });
 }
 
 /* <button class="deleteButton">Supprimer </button>; */
