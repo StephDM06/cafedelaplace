@@ -58,7 +58,7 @@ function remplirFormulaire() {
     localStorage.setItem(`@produit `, JSON.stringify(produittab));
     console.log(product);
   });
-});
+}
 
 contenuProd.style.visibility = "hidden";
 // function produitSupprime() {
