@@ -1,24 +1,29 @@
 let titreProduit = document.querySelector("#titreProduit");
 
 let detailProduit = document.querySelector("#remplir");
+let nom;
+let paht;
+let marge;
+let quantite;
+let PrixHT;
+let PrixTTC;
 let produittab = [];
 
-if (JSON.stringify(localStorage.getItem("@produit")) == "") {
+if (localStorage.getItem("@produit ") == "") {
   produittab = [];
   console.log("y en a pas");
 } else {
-  produittab = JSON.stringify(localStorage.getItem("@produit"));
+  produittab = JSON.stringify(localStorage.getItem("@produit "));
   console.log("y en a");
-  let nom = localStorage.getItem("nom");
-  let paht = localStorage.getItem("paht");
-  let PrixTTC = localStorage.getItem("PrixTTC");
+  produittab = JSON.parse(localStorage.getItem("@produit "));
+  console.log(JSON.parse(localStorage.getItem("@produit ")));
   let content = "";
   let title = "";
 
   content += `
             <p> Prix d'achat HT: ${paht}
             <p> Prix de vente TTC: ${PrixTTC}
-    
+
         </p><button class="deleteButton">Supprimer </button>`;
   title += `
     <p> Nom du produit ${nom}`;
