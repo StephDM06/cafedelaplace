@@ -80,13 +80,13 @@
             <p>
               <form  id="detailProd">
               <label for="typeProduit">Type de produit :</label>
-              <select name="selectType" id="type-select" onchange="">
+              <select name="selectType" >
                 <option value="">--Choisissez un type de produit--</option>
                 <option value="autre">Boisson non Alcoolisée</option>
                 <option value="balcool">Boisson alcoolisée</option>
                 <option value="autre">Autre type de produit</option>
               </select>
-              <input id="valideType" type="submit" value="Valider" />
+              <input type="submit" value="Valider" />
             </p>
               <div id="saisie">
             
@@ -95,7 +95,7 @@
               <input
                 type="text"
                 placeholder="Nom du produit"
-                id="nom"
+                id="name"
                 name="nom"
                 
               />
@@ -106,7 +106,7 @@
               <input
                 type="text"
                 placeholder="PA HT"
-                id="paht"
+                id="pachat"
                 name="paht"
                 
               />
@@ -117,7 +117,7 @@
               <input
                 type="text  "
                 placeholder="marge"
-                id="marge"
+                id="coeff"
                 name="marge"
                 
               />
@@ -142,16 +142,16 @@
               />
             </div>
               <br />
-              <div id="quantite">
+              
                 <label for="quantite">Quantite à mettre en stock : </label>
                 <input
                   type="text  "
                   placeholder="Quantité"
                   
-                  name="quantite"
+                  name="quantitestock"
                   
                 />
-              </div>
+              
               <br />
         
               
