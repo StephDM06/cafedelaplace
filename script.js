@@ -4,6 +4,7 @@ let degre = document.querySelector("#degre");
 let detailProduit = document.querySelector(".accordion-body");
 let produittab = [];
 let validProduit = document.querySelector("#validNewProd");
+let fermeture = document.querySelector("#Close");
 let product;
 
 // contenuProd.style.visibility = "hidden";
@@ -35,15 +36,23 @@ function remplirFormulaire() {
     degre.style.display = "none";
   } else {
     contenuProd.style.visibility = "visible";
+    degre.style.display = "block";
   }
 
-  validProduit.addEventListener("click", function () {
+  validProduit.onclick = function () {
     let nom = document.querySelector("#name").value;
     let paht = document.querySelector("#pachat").value;
     let marge = document.querySelector("#coeff").value;
     let quantite = document.querySelector("#quantite").value;
-    let PrixHT = document.querySelector("#PrixHT");
-    let PrixTTC = document.querySelector("#PrixTTC");
+
+    // variables pour calcul des prixHT et TTC //
+    let PrixHT = document.querySelector("#PrixHT").value;
+    let PrixTTC = document.querySelector("#PrixTTC").value;
+    let containerPrixTTC = document.querySelector(".containerPrixTTC");
+    let containerPrixHT = document.querySelector(".containerPrixHT");
+    PrixHT = paht * marge;
+    PrixTTC = PrixHT * 1.2;
+
     if (data.get("selectType") == "autre") {
       product = new ProtoProduit(nom, paht, marge, quantite, PrixHT, PrixTTC);
 
@@ -53,25 +62,27 @@ function remplirFormulaire() {
 
       console.log("avecAlcool");
     }
+    // calcul prixHT et TTC avec création du <span> avec valeur du calcul //
 
+    let valeurPrixHT = document.createElement("span");
+    valeurPrixHT.innerText = PrixHT;
+    containerPrixHT.appendChild(valeurPrixHT);
+
+    let valeurPrixTTC = document.createElement("span");
+    valeurPrixTTC.innerText = PrixTTC;
+    containerPrixTTC.appendChild(valeurPrixTTC);
+
+    //-----------------------------------------------------//
     produittab.push(product);
     localStorage.setItem(`@produit `, JSON.stringify(produittab));
-    console.log(product);
-  });
+    console.log("coucou", produittab);
+  };
 }
 
+fermeture.addEventListener("click", function () {
+  dataQuery.reset();
+});
 contenuProd.style.visibility = "hidden";
-// function produitSupprime() {
-//   let boutonSupprime = document.querySelector(".boutonSupprime");
-
-//   boutonSupprime.Array.forEach((element) => {});
-//   (function (boutonSupprimes, index) {
-//     boutonSupprimes.addEventListener("click", function () {
-//       produittab.splice(index, 1);
-//       ajoutProduit();
-//     });
-//   });
-// }
 
 /**
  *

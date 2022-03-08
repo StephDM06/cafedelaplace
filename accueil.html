@@ -70,6 +70,7 @@
               <label>Votre nouveau Produit</label>
             </h5>
             <button
+            id="fermeture"
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
@@ -95,7 +96,7 @@
               <input
                 type="text"
                 placeholder="Nom du produit"
-                id="nom"
+                id="name"
                 name="nom"
                 
               />
@@ -104,9 +105,9 @@
         
               <label for="paht">Prix achat HT: </label>
               <input
-                type="text"
+                type="number"
                 placeholder="PA HT"
-                id="paht"
+                id="pachat"
                 name="paht"
                 
               />
@@ -115,19 +116,23 @@
         
               <label for="marge">Marge/coefficient souhaité: </label>
               <input
-                type="text  "
+                type="number"
                 placeholder="marge"
-                id="marge"
+                id="coeff"
                 name="marge"
                 
               />
         
               <br />
         
-              <label for="pvht" id="PrixHT">Prix de vente HT: </label>
+              <div class="containerPrixHT">
+                <label for="pvht" id="PrixHT">Prix de vente HT: </label>
+              </div>
               
               <br />
-              <label for="pvttc" id="PrixTTC">Prix de vente TTC : </label>
+              <div class="containerPrixTTC">
+                <label for="pvttc" id="PrixTTC">Prix de vente TTC : </label>
+              </div>
               
         
               <br />
@@ -141,7 +146,7 @@
                 
               />
               <br />
-              <div id="quantite">
+              
                 <label for="quantite">Quantite à mettre en stock : </label>
                 <input
                   type="text  "
@@ -150,7 +155,7 @@
                   name="quantitestock"
                   
                 />
-              </div>
+              
               <br />
         
               
@@ -165,6 +170,7 @@
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
+              id="Close"
             >
               Close
             </button>
