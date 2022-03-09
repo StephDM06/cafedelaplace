@@ -56,7 +56,7 @@ function envoiDonnees() {
               <p> Quantité en stock: ${element.quantite}
               <p> Prix de vente TTC: ${element.PrixTTC}
 
-          </p><button class="deleteButton">Supprimer </button></div>
+          </p><button class="deleteButton"><i class="fa fa-trash"></i></button> </button></div>
           </div>
         </div>
               `;

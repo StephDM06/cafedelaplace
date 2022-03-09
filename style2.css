@@ -11,3 +11,14 @@ header {
 .contenu {
   justify-content: center;
 }
+.deleteButton{
+  background-color: red; 
+  border: none; 
+  color: white; 
+  padding: 12px 16px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+.deleteButton:hover {
+  background-color: red;
+}
