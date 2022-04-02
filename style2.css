@@ -1,0 +1,17 @@
+header h1 {
+  text-align: center;
+  line-height: 150%;
+}
+header {
+  background-color: bisque;
+}
+.inside1 {
+  justify-content: center;
+}
+.contenu {
+  justify-content: center;
+}
+#title {
+  text-decoration: none;
+  color: black;
+}

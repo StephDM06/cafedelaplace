@@ -48,7 +48,7 @@ span {
 }
 .ajouter {
   text-align: center;
-  padding-top: 15%;
+  padding-top: 5%;
 }
 .btnpart2 {
   display: inline-block;
@@ -78,4 +78,16 @@ header h1 {
 }
 header {
   background-color: bisque;
+}
+#title {
+  text-decoration: none;
+  color: black;
+}
+#welcome{
+  margin-top: 5%;
+  text-align: center;
+}
+.btn.btn-primary{
+  background-color: brown;
+  color:white;
 }
