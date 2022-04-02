@@ -22,8 +22,9 @@ dataQuery.addEventListener("submit", function (e) {
   // console.log(data.get("selectType"));
 
   remplirFormulaire();
-  // contenuProd.style.visibility = "hidden";
 });
+
+contenuProd.style.visibility = "hidden";
 
 function remplirFormulaire() {
   let data = new FormData(dataQuery);
@@ -78,10 +79,8 @@ function remplirFormulaire() {
 
 fermeture.addEventListener("click", function () {
   dataQuery.reset();
-  contenuProd.style.visibility = "hidden";
-  PrixHT = "";
-  PrixTTC = "";
 });
+contenuProd.style.visibility = "hidden";
 
 /**
  *
