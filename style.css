@@ -48,7 +48,7 @@ span {
 }
 .ajouter {
   text-align: center;
-  padding-top: 5%;
+ margin-top: 20%;
 }
 .btnpart2 {
   display: inline-block;
@@ -78,16 +78,34 @@ header h1 {
 }
 header {
   background-color: bisque;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #title {
   text-decoration: none;
   color: black;
 }
-#welcome{
+#welcome {
   margin-top: 5%;
   text-align: center;
 }
-.btn.btn-primary{
+.btn.btn-primary {
+  background-color: bisque;
+  color: black;
+}
+#btnConsult a {
+  color: black;
+}
+#btnConsult a:hover{
+  color: white;
+}
+body {
+  background-image: url("cafe.jpg");
+  background-size: cover;
+}
+.btn.btn-primary:hover {
   background-color: brown;
-  color:white;
+  color: white;
 }

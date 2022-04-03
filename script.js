@@ -75,12 +75,16 @@ function remplirFormulaire() {
     localStorage.setItem(`@produit `, JSON.stringify(produittab));
     console.log("coucou", produittab);
   };
+    this.valeurPrixHT = "";
+    this.valeurPrixTTC = "";
 }
 
 fermeture.addEventListener("click", function () {
   dataQuery.reset();
+  contenuProd.style.visibility = "hidden";
+
 });
-contenuProd.style.visibility = "hidden";
+
 
 /**
  *

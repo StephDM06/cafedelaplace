@@ -24,7 +24,7 @@ function envoiDonnees() {
     <div class="accordion accordion-flush" id="accordionFlushExample">
       <div class="accordion-item">
         <div class="row inside1">
-          <div class="col-md-8 part1">
+          <div class="part1">
             <h2 class="accordion-header" id="flush-heading${index}">
               <button
                 id="titreProduit"
@@ -221,7 +221,7 @@ function modifier() {
       </div>
     </div>`;
 
-      contenuModif.innerHTML = newcontenu;
+      newcontenu.innerHTML = contenuModif;
 
       // let write = newcontenu;
       // contenu.appendChild(write);
