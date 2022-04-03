@@ -7,7 +7,8 @@ header {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 250px;
 }
 .inside1 {
   justify-content: center;
@@ -39,4 +40,12 @@ body {
   background-color:bisque;
   color:black;
   border-radius: 10px;
+}
+.btn.btn-primary {
+  background-color: brown;
+  color: white;
+}
+.btn.btn-primary:hover {
+  background-color: bisque;
+  color: black;
 }
